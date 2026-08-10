@@ -1,6 +1,7 @@
 # ⚙️ Códigos de extração RStudio
 ## 📑 Descrição:
 Repositório destinado à **extração e tratamento automatizado de dados públicos municipais** utilizando a API do **SIDRA (IBGE)** por meio do R.
+
 Os scripts realizam a consulta de tabelas do SIDRA, aplicação de filtros geográficos e temporais, limpeza e padronização dos dados e exportação dos resultados em formato `.csv`.
 
 ## 📚 Bibliotecas utilizadas:
