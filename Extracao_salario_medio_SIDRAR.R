@@ -8,7 +8,7 @@ library(dplyr)
 info_sidra(9509)
 
 #Captura as variáveis necessárias pelo código: var c(1606, 10143)
-codigos_variavel <- c(1606, 10143)
+codigos_variavel <- c(1606, 10143, 706)
 
 #Faz a requisição pro Sidra com os parâmetros 
 dados_brutos <- get_sidra(
