@@ -16,7 +16,7 @@ dados_brutos <- get_sidra(
   variable = codigos_variavel,          #Código das variáveis 
   period = "2022",                      #Período 
   geo = "City",                         #Nível Geográfico (Municipio)
-  geo.filter = list("State" = 26)       #Filtro para Pernambuco
+  geo.filter = list("State" = 26)       #Filtro para Pernambuco        
 )
 
 #Faz a limpeza dos nomes (retira acentos,espaços e letras maiusculas)
@@ -38,7 +38,10 @@ dados_limpos <- dados_limpos |>
     valor = as.numeric(valor),       #Muda o tipo de variável de caracter para numérico
     orgao_fonte = "IBGE/SIDRA"       #Adiciona uma coluna orgao_fonte com a descrição
   ) |> 
-  filter(!is.na(valor))              #Remove tudo que não possui um valor
+  filter(
+    !is.na(valor),                   #Remove tudo que não possui um valor
+    unidade_de_medida == "Percentual"
+  )              
 
 #exporta o resultado em csv
 write.csv(dados_limpos, "Taxa_Urbanizacao.csv", row.names = FALSE, fileEncoding = "UTF-8")
