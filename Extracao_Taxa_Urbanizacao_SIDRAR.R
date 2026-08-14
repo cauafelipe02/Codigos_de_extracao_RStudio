@@ -35,7 +35,7 @@ dados_limpos <- dados_limpos |>
     situacao_do_domicilio
   ) |> 
   mutate(
-    valor = as.numeric(valor),       #Muda o tipo de variável de caracter para numérico
+    valor = as.numeric(valor)/100,   #Muda o tipo de variável de caracter para numérico e transforma em decimal
     orgao_fonte = "IBGE/SIDRA"       #Adiciona uma coluna orgao_fonte com a descrição
   ) |> 
   filter(
@@ -44,4 +44,4 @@ dados_limpos <- dados_limpos |>
   )              
 
 #exporta o resultado em csv
-write.csv(dados_limpos, "Taxa_Urbanizacao.csv", row.names = FALSE, fileEncoding = "UTF-8")
+write.csv2(dados_limpos, "Taxa_Urbanizacao.csv", row.names = FALSE, fileEncoding = "UTF-8")
