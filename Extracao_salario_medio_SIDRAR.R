@@ -61,4 +61,4 @@ resultado <- dados_limpos |>
   )
 
 #exporta o resultado em csv
-write.csv(resultado, "salario_medio_mensal.csv", row.names = FALSE, fileEncoding = "UTF-8")
+write.csv2(resultado, "salario_medio_mensal.csv", row.names = FALSE, fileEncoding = "UTF-8")
