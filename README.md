@@ -8,7 +8,8 @@ Os scripts realizam a consulta de tabelas do SIDRA, aplicação de filtros geogr
 - `sidrar` — acesso à API do SIDRA/IBGE;
 - `dplyr` — manipulação e transformação dos dados;
 - `janitor` — limpeza e padronização dos nomes das colunas.
-  
+- `tydr` — pivotar tabelas destrinchando-as.
+
 ## 🖥️ Fluxo da extração:
 1. Consulta das informações da tabela SIDRA;
 2. Definição das variáveis e períodos desejados;
